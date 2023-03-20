@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import styled from "styled-components"
-import { buttonPrimary, md, xs } from "../style/DesignSystem"
+import { accent, buttonPrimary, md, shadowSm, xs } from "../style/DesignSystem"
 
 
 type Props = {
@@ -21,6 +21,11 @@ const Button = styled.button`
 	gap: ${xs};
 	cursor: pointer;
 	background-color: ${buttonPrimary};
+	&:hover{
+		color: white;
+		background-color: ${accent};
+	}
+	box-shadow: ${shadowSm};
 `
 
 const LinkButton = ({ children, href }: Props) => {
