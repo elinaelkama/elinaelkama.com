@@ -3,6 +3,7 @@ import Portrait from './components/Portrait'
 import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typefacePrimary } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
+import Description from './components/Description'
 
 const AppContainer = styled.div`
   background-color: ${backgroundPrimary};
@@ -39,7 +40,7 @@ function App() {
           <Portrait altText='Portrait of Elina' />
         </PersonalDetails>
         <div>
-          <h2>Description</h2>
+          <Description />
         </div>
         <div>
           <h2>Portfolio</h2>
