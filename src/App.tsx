@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
-import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typefacePrimary } from './style/DesignSystem'
+import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typeface } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
 import Description from './components/Description'
@@ -12,11 +12,13 @@ const AppContainer = styled.div`
   display: grid;
   justify-content: center;
   align-content: start;
-  font-family: ${typefacePrimary};
+  font-family: ${typeface};
 `
 const Container = styled.div`
   background-color: ${backgroundSecondary};
   max-width: 50vw;
+  min-width: 64rem;
+  min-height: 100vh;
   padding: ${lg};
   display: grid;
   box-shadow: ${shadowLg};
@@ -37,7 +39,9 @@ function App() {
             <h2>JavaScript, Python, PHP, Java, MySQL, C#, React</h2>
             <Links />
           </div>
-          <Portrait altText='Portrait of Elina' />
+          <div>
+            <Portrait altText='Portrait of Elina' />
+          </div>
         </PersonalDetails>
         <div>
           <Description />

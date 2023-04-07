@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { accent, border, lg, md, sm, textPrimary, textSecondary, xs } from "../style/DesignSystem"
+import { accent, border, lg, md, sm, xs } from "../style/DesignSystem"
 
 type Props = {}
 
@@ -10,13 +10,11 @@ const Card = styled.div`
 
 const Header = styled.h1`
 	font-size: ${lg};
-	color: ${textPrimary};
 	margin: ${xs};
 `
 
 const Subtitle = styled.h2`
 	font-size: ${md};
-	color: ${textSecondary};
 	margin: ${sm};
 `
 

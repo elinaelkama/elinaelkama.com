@@ -1,18 +1,27 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import LinkButton from "./LinkButton";
 import styled from "styled-components";
-import { md } from "../style/DesignSystem";
+import { accent, lg, md, sm, textPrimary, textShadow, typeface } from "../style/DesignSystem";
 
 const Container = styled.div`
 	display: inline-flex;
 	gap: ${md};
 `
+const Link = styled.a`
+	text-decoration: none;
+	font-family: ${typeface};
+	color: black;
+	font-size: ${md};
+	&:hover{
+		text-decoration: none;
+		color: ${accent};
+	}
+`
 
 const Links = () => {
 	return (
 		<Container>
-			<LinkButton href="https://www.linkedin.com/in/elina-elkama-99423a232/"><FaLinkedin /><span>LinkedIn</span></LinkButton>
-			<LinkButton href="https://github.com/elinaelkama"><FaGithub /><span>GitHub</span></LinkButton>
+			<Link href="https://www.linkedin.com/in/elina-elkama-99423a232/" target="_blank"><FaLinkedin /> <span>LinkedIn</span></Link>
+			<Link href="https://github.com/elinaelkama" target="_blank"><FaGithub /> <span>GitHub</span></Link>
 		</Container>
 	)
 }
