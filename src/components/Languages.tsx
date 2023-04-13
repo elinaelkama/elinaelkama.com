@@ -6,7 +6,6 @@ import { lg, md, sm, xxl, xs, accent, backgroundTertiary } from "../style/Design
 type Props = {}
 
 const Container = styled.div`
-	max-height: 30rem;
 	display: flex;
 	justify-content: space-evenly;
 	margin: ${sm} 0;

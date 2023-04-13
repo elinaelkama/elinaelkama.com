@@ -19,7 +19,6 @@ const Header = styled.h2`
 const Container = styled.div`
 	border-left: ${xxl} solid ${accent};
 	padding: ${xs};
-	max-height: 20rem;
 	background-color: ${backgroundTertiary};
 `
 

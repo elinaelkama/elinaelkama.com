@@ -18,17 +18,17 @@ const AppContainer = styled.div`
 const Container = styled.div`
   background-color: ${backgroundSecondary};
   max-width: 50vw;
-  min-width: 64rem;
+  min-width: 35rem;
   min-height: 100vh;
   padding: ${lg};
   display: grid;
   box-shadow: ${shadowLg};
 `
 const PersonalDetails = styled.div`
-  display: grid;
-  grid-template-columns: 40rem min-content;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
   gap: ${sm};
-  max-height: 20rem;
 `
 
 function App() {
