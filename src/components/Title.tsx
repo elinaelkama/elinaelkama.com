@@ -1,11 +1,12 @@
 import styled from "styled-components"
-import { accent, lg, md, sm, xs } from "../style/DesignSystem"
+import { accent, backgroundTertiary, lg, md, sm, xs, xxl } from "../style/DesignSystem"
 
 type Props = {}
 
 const Card = styled.div`
-	border: ${sm} double ${accent};
-	border-radius: ${xs};
+	border-bottom: ${md} solid ${accent};
+	background-color: ${backgroundTertiary};
+	padding: ${xs};
 `
 
 const Header = styled.h1`

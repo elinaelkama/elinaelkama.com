@@ -1,11 +1,13 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styled from "styled-components";
-import { accent, lg, md, sm, textPrimary, textShadow, typeface } from "../style/DesignSystem";
+import { accent, backgroundTertiary, lg, md, sm, textShadow, typeface, xs } from "../style/DesignSystem";
 
 const Container = styled.div`
 	padding: ${sm};
-	display: inline-flex;
-	gap: ${md};
+	display: flex;
+	justify-content: space-evenly;
+	background-color: ${backgroundTertiary};
+	border-bottom: ${xs} solid ${accent};
 `
 const Link = styled.a`
 	text-decoration: none;

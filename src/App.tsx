@@ -3,7 +3,7 @@ import Portrait from './components/Portrait'
 import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typeface, xl } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
-import Description from './components/Description'
+import Section from './components/Section'
 import Languages from './components/Languages'
 
 const AppContainer = styled.div`
@@ -46,7 +46,12 @@ function App() {
           </div>
         </PersonalDetails>
         <div>
-          <Description />
+          <Section title='Description'>
+            <p>I'm a student at Haaga-Helia University of Applied Sciences, studying Business Information Technology.</p>
+            <p>My most recent work is a Discord Bot, that is written with Python, is fully tested and is published.
+              It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
+            <p>I'm currently looking for work and or work placement.</p>
+          </Section>
         </div>
         {/*<div>
           <h2>Portfolio</h2>
