@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
-import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typeface } from './style/DesignSystem'
+import { backgroundPrimary, backgroundSecondary, lg, shadowLg, sm, typeface, xl } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
 import Description from './components/Description'
+import Languages from './components/Languages'
 
 const AppContainer = styled.div`
   background-color: ${backgroundPrimary};
@@ -27,6 +28,7 @@ const PersonalDetails = styled.div`
   display: grid;
   grid-template-columns: 40rem min-content;
   gap: ${sm};
+  max-height: 20rem;
 `
 
 function App() {
@@ -36,19 +38,19 @@ function App() {
         <PersonalDetails>
           <div>
             <Title />
-            <h2>JavaScript, Python, PHP, Java, MySQL, C#, React</h2>
-            <Links />
+            <Languages />
           </div>
           <div>
             <Portrait altText='Portrait of Elina' />
+            <Links />
           </div>
         </PersonalDetails>
         <div>
           <Description />
         </div>
-        <div>
+        {/*<div>
           <h2>Portfolio</h2>
-        </div>
+  </div>*/}
       </Container>
     </AppContainer>
   )

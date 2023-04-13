@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { accent, lg, md, sm, textPrimary, textShadow, typeface } from "../style/DesignSystem";
 
 const Container = styled.div`
+	padding: ${sm};
 	display: inline-flex;
 	gap: ${md};
 `

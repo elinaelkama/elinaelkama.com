@@ -15,6 +15,7 @@ const Header = styled.h2`
 const Container = styled.div`
 	border-left: 15px solid ${accent};
 	padding-left: ${xs};
+	max-height: 20rem;
 `
 
 const Description = (props: Props) => {
