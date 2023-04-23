@@ -19,6 +19,7 @@ const Header = styled.h2`
 const Container = styled.div`
 	border-left: ${xxl} solid ${accent};
 	padding: ${xs};
+	margin-bottom: ${sm};
 	background-color: ${backgroundTertiary};
 `
 

@@ -5,6 +5,7 @@ import Links from './components/Links'
 import Title from './components/Title'
 import Section from './components/Section'
 import Languages from './components/Languages'
+import Showcase from './components/Showcase'
 
 const AppContainer = styled.div`
   background-color: ${backgroundPrimary};
@@ -53,9 +54,20 @@ function App() {
             <p>I'm currently looking for work and or work placement.</p>
           </Section>
         </div>
-        {/*<div>
-          <h2>Portfolio</h2>
-  </div>*/}
+        <div>
+          <Section title='Portfolio'>
+            <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci'>
+              <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
+              <p>The bots functions are tested using unittest. The coverage of tests with coverage is 100 %.</p>
+              <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
+              <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
+            </Showcase>
+            <Showcase title='Website' link='https://github.com/elinaelkama/elinaelkama.com'>
+              <p>This page is made with TypeScript and React, using styled-components.</p>
+              <p>It's published using GitHub pages.</p>
+            </Showcase>
+          </Section>
+        </div>
       </Container>
     </AppContainer>
   )

@@ -4,6 +4,7 @@ import { accent, backgroundTertiary, lg, md, sm, textShadow, typeface, xs } from
 
 const Container = styled.div`
 	padding: ${sm};
+	margin-bottom: ${md};
 	display: flex;
 	justify-content: space-evenly;
 	background-color: ${backgroundTertiary};
@@ -14,6 +15,7 @@ const Link = styled.a`
 	font-family: ${typeface};
 	color: black;
 	font-size: ${md};
+	transition: 0.1s linear color;
 	&:hover{
 		text-decoration: none;
 		color: ${accent};
