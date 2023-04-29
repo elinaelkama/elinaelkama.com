@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-	width: calc(min(100%, 30rem) - ${xs});
+	width: min(100%, 30rem);
 	box-shadow: ${imgShadow};
 	margin-bottom: ${md};
 	box-sizing: border-box;
