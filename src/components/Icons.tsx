@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaJava, FaPhp, FaPython, FaReact } from "react-icons/fa";
 import { SiMysql, SiJavascript, SiCsharp } from "react-icons/si";
-import { lg, md, sm, xxl, xs, accent, backgroundTertiary } from "../style/DesignSystem";
+import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmall } from "../style/DesignSystem";
 
 type Props = {}
 
@@ -9,6 +9,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	margin: ${sm} 0;
+	flex-wrap: wrap;
 `
 
 const Icon = styled.div`
@@ -19,10 +20,13 @@ const Icon = styled.div`
 	padding: ${xs};
 	border-radius: 50%;
 	font-size: ${xxl};
+	@media screen and (max-width: ${screenSmall}){
+		font-size: ${lg};
+	}
 `
 //JavaScript Python PHP Java MySQL C# React
 
-const Languages = (props: Props) => {
+const Icons = (props: Props) => {
 	return (
 		<Container>
 			<Icon><SiJavascript /></Icon>
@@ -36,4 +40,4 @@ const Languages = (props: Props) => {
 	)
 }
 
-export default Languages
+export default Icons

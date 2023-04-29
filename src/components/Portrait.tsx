@@ -1,21 +1,26 @@
 import styled from 'styled-components'
 import elinaPortrait from '../assets/elina_2b.jpg'
-import { accent, imgShadow, md, shadowMd, shadowSm, sm, xs } from '../style/DesignSystem'
+import { imgShadow, md, screenSmall, xs } from '../style/DesignSystem'
 
 type Props = {
 	altText?: string
 }
+const Container = styled.div`
+	text-align: center;
+`
 
 const Image = styled.img`
-	max-height: 30rem;
-	max-width: 30rem;
+	width: calc(min(100%, 30rem) - ${xs});
 	box-shadow: ${imgShadow};
 	margin-bottom: ${md};
+	box-sizing: border-box;
 `
 
 const Portrait = ({ altText }: Props) => {
 	return (
-		<Image src={elinaPortrait} alt={altText} />
+		<Container>
+			<Image src={elinaPortrait} alt={altText} />
+		</Container>
 	)
 }
 

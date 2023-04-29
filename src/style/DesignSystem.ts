@@ -15,3 +15,4 @@ export const shadowMd = "1px 1px 4px #333"
 export const shadowLg = "1px 1px 6px #333"
 export const imgShadow = `${xs} ${xs} 0px ${accent}`
 export const textShadow = "1px 1px 1px #F9ADA0"
+export const screenSmall = "630px"

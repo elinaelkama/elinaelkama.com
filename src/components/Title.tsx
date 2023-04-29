@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { accent, backgroundTertiary, lg, md, sm, xs, xxl } from "../style/DesignSystem"
+import { accent, backgroundTertiary, lg, md, screenSmall, sm, xs, xxl } from "../style/DesignSystem"
 
 type Props = {}
 
@@ -7,6 +7,9 @@ const Card = styled.div`
 	border-bottom: ${md} solid ${accent};
 	background-color: ${backgroundTertiary};
 	padding: ${xs};
+	@media screen and (max-width: ${screenSmall}) {
+		border-bottom: ${xs} solid ${accent};
+	}
 `
 
 const Header = styled.h1`
