@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaJava, FaPhp, FaPython, FaReact } from "react-icons/fa";
 import { SiMysql, SiJavascript, SiCsharp } from "react-icons/si";
-import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmall } from "../style/DesignSystem";
+import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmallPhone } from "../style/DesignSystem";
 
 type Props = {}
 
@@ -20,7 +20,7 @@ const Icon = styled.div`
 	padding: ${xs};
 	border-radius: 50%;
 	font-size: ${xxl};
-	@media screen and (max-width: ${screenSmall}){
+	@media screen and (max-width: ${screenSmallPhone}){
 		font-size: ${lg};
 	}
 `

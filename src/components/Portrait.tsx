@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import elinaPortrait from '../assets/elina_2b.jpg'
-import { imgShadow, md, screenSmall, xs } from '../style/DesignSystem'
+import { imgShadow, md, screenSmallPhone, xs } from '../style/DesignSystem'
 
 type Props = {
 	altText?: string

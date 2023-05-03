@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { accent, backgroundTertiary, lg, md, screenSmall, sm, textSize, xs, xxl } from '../style/DesignSystem'
+import { accent, backgroundTertiary, lg, md, screenSmallPhone, sm, textSize, xs, xxl } from '../style/DesignSystem'
 import { ReactNode } from 'react'
 
 type Props = {
@@ -11,7 +11,7 @@ const Body = styled.div`
 	font-size: ${textSize};
 	margin: ${sm};
 	max-width: 61rem;
-	@media screen and (max-width: ${screenSmall}) {
+	@media screen and (max-width: ${screenSmallPhone}) {
 		margin: none;
 		padding: none;
 	}
@@ -19,7 +19,7 @@ const Body = styled.div`
 const Header = styled.h2`
 	font-size: ${md};
 	margin: ${xs};
-	@media screen and (max-width: ${screenSmall}) {
+	@media screen and (max-width: ${screenSmallPhone}) {
 		margin: none;
 		padding: none;
 	}
@@ -29,7 +29,7 @@ const Container = styled.div`
 	padding: ${xs};
 	margin: ${sm} 0;
 	background-color: ${backgroundTertiary};
-	@media screen and (max-width: ${screenSmall}) {
+	@media screen and (max-width: ${screenSmallPhone}) {
 		border-left: ${md} solid ${accent};
 		max-width: 90%;
 	}

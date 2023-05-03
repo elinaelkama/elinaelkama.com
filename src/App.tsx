@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
-import { accent, backgroundPrimary, backgroundSecondary, lg, screenSmall, shadowLg, sm, typeface, xl, xs } from './style/DesignSystem'
+import faciPicture from './assets/faci.jpg'
+import { accent, backgroundPrimary, backgroundSecondary, lg, screenSmallPhone, shadowLg, sm, typeface, xl, xs } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
 import Section from './components/Section'
@@ -23,7 +24,7 @@ const Container = styled.div`
   display: grid;
   margin: auto;
   box-shadow: ${shadowLg};
-  @media screen and (max-width: ${screenSmall}){
+  @media screen and (max-width: ${screenSmallPhone}){
     justify-content: left;
     padding: ${sm};
     box-shadow: none;
@@ -34,7 +35,7 @@ const PersonalDetails = styled.div`
   grid-template-columns: auto 20rem;
   justify-content: space-between;
   gap: ${sm};
-  @media screen and (max-width: ${screenSmall}){
+  @media screen and (max-width: ${screenSmallPhone}){
     gap: none;
     grid-template-columns: auto;
   }
@@ -61,7 +62,7 @@ function App() {
           <p>I'm currently looking for work and or work placement.</p>
         </Section>
         <Section title='Portfolio'>
-          <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci'>
+          <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
             <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
             <p>The bots functions are tested using unittest. The coverage of tests with coverage is 100 %.</p>
             <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>

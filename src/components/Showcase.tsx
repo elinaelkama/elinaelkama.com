@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { accent, backgroundTertiary, lg, md, sm, textSize, typeface, xs, xxl } from '../style/DesignSystem'
+import { accent, backgroundTertiary, lg, md, screenSmallPad, sm, textSize, typeface, xs, xxl } from '../style/DesignSystem'
 import { ReactNode } from 'react'
 import { FaGithub } from "react-icons/fa";
 
@@ -8,19 +8,20 @@ type Props = {
 	children: ReactNode
 	title: string
 	link?: string
+	img?: string
+	altText?: string
 }
 
 const Body = styled.div`
 	font-size: ${textSize};
-	margin: ${sm};
 	max-width: 61rem;
+	margin-left: ${md};
 `
 const Header = styled.h2`
 	font-size: ${textSize};
-	margin: ${xs};
 `
 const Container = styled.div`
-	padding: ${xs};
+	padding: ${sm};
 	background-color: ${backgroundTertiary};
 	border-top: ${xs} solid ${accent};
 `
@@ -35,8 +36,35 @@ const Link = styled.a`
 		color: ${accent};
 	}
 `
+const ImageCont = styled.div`
+	display: grid;
+	grid-template-columns: auto auto;
+	overflow: hidden;
+	@media screen and (max-width: ${screenSmallPad}){
+		grid-template-columns: none;
+		text-align: left;
+  	}
+`
 
-const Showcase = ({ title, children, link }: Props) => {
+const Image = styled.img`
+	max-width: 20rem;
+`
+
+const Showcase = ({ title, children, link, img, altText }: Props) => {
+	if (img != undefined) {
+		return (
+			<Container>
+				<Header>{title}</Header>
+				<ImageCont>
+					<Image alt={altText} src={img}></Image>
+					<Body>
+						{children}
+						<Link href={link} target="_blank"><FaGithub />GitHub</Link>
+					</Body>
+				</ImageCont>
+			</Container>
+		)
+	}
 	return (
 		<Container>
 			<Header>{title}</Header>
