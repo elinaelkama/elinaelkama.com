@@ -45,8 +45,8 @@ function App() {
   return (
     <html>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" />
         <meta name='theme-color' content={accent}></meta>
       </head>
       <body>
