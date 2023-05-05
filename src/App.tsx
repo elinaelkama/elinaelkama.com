@@ -6,7 +6,6 @@ import Links from './components/Links'
 import Title from './components/Title'
 import Section from './components/Section'
 import Icons from './components/Icons'
-import Showcase from './components/Showcase'
 import './index.css'
 
 const AppContainer = styled.div`
@@ -45,8 +44,7 @@ function App() {
   return (
     <html>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Questrial&display=swap" />
         <meta name='theme-color' content={accent}></meta>
       </head>
       <body>
@@ -68,17 +66,15 @@ function App() {
                 It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
               <p>I'm currently looking for work and or work placement.</p>
             </Section>
-            <Section title='Portfolio'>
-              <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
-                <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
-                <p>The bots functions are tested using unittest. The coverage of tests with coverage is 100 %.</p>
-                <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
-                <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
-              </Showcase>
-              <Showcase title='Website' link='https://github.com/elinaelkama/elinaelkama.com'>
-                <p>This page is made with TypeScript and React, using styled-components.</p>
-                <p>It's published using GitHub pages.</p>
-              </Showcase>
+            <Section title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
+              <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
+              <p>The bots functions are tested using unittest. The coverage of tests is 100 %.</p>
+              <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
+              <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
+            </Section>
+            <Section title='This website' link='https://github.com/elinaelkama/elinaelkama.com'>
+              <p>This page is made with TypeScript and React, using styled-components.</p>
+              <p>It's published using GitHub pages.</p>
             </Section>
           </Container>
         </AppContainer>

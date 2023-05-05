@@ -14,6 +14,9 @@ const Container = styled.div`
 	}
 `
 const Link = styled.a`
+	display: flex;
+	align-items: center;
+	gap: ${xs};
 	text-decoration: none;
 	color: black;
 	font-size: ${md};

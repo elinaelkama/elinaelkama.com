@@ -9,7 +9,7 @@ const Card = styled.div`
 	padding: ${xs};
 	@media screen and (max-width: ${screenSmallPhone}) {
 		border-width: ${xs};
-		padding: 0;
+		padding-bottom: 0;
 	}
 `
 
