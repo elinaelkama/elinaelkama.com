@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styled from "styled-components";
-import { accent, backgroundTertiary, lg, md, sm, textShadow, typeface, xs } from "../style/DesignSystem";
+import { accent, backgroundTertiary, lg, md, screenSmallPhone, sm, textShadow, typeface, xs } from "../style/DesignSystem";
 
 const Container = styled.div`
 	padding: ${sm};
@@ -9,6 +9,9 @@ const Container = styled.div`
 	justify-content: space-evenly;
 	background-color: ${backgroundTertiary};
 	border-bottom: ${xs} solid ${accent};
+	@media screen and (max-width: ${screenSmallPhone}){
+		padding: ${xs};
+	}
 `
 const Link = styled.a`
 	text-decoration: none;

@@ -16,6 +16,9 @@ const Body = styled.div`
 	font-size: ${textSize};
 	max-width: 61rem;
 	margin-left: ${md};
+	@media screen and (max-width: ${screenSmallPad}){
+		margin-left: 0;
+  	}
 `
 const Header = styled.h2`
 	font-size: ${textSize};
@@ -24,6 +27,9 @@ const Container = styled.div`
 	padding: ${sm};
 	background-color: ${backgroundTertiary};
 	border-top: ${xs} solid ${accent};
+	@media screen and (max-width: ${screenSmallPad}){
+		padding: 0;
+  	}
 `
 const Link = styled.a`
 	text-decoration: none;
@@ -39,7 +45,6 @@ const Link = styled.a`
 const ImageCont = styled.div`
 	display: grid;
 	grid-template-columns: auto auto;
-	overflow: hidden;
 	@media screen and (max-width: ${screenSmallPad}){
 		grid-template-columns: none;
 		text-align: left;
@@ -47,7 +52,7 @@ const ImageCont = styled.div`
 `
 
 const Image = styled.img`
-	max-width: 20rem;
+	width: min(100%, 20rem);
 `
 
 const Showcase = ({ title, children, link, img, altText }: Props) => {

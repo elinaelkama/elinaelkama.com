@@ -12,16 +12,15 @@ const Body = styled.div`
 	margin: ${sm};
 	max-width: 61rem;
 	@media screen and (max-width: ${screenSmallPhone}) {
-		margin: none;
-		padding: none;
+		margin: 0;
+		padding: 0;
 	}
 `
 const Header = styled.h2`
 	font-size: ${md};
 	margin: ${xs};
 	@media screen and (max-width: ${screenSmallPhone}) {
-		margin: none;
-		padding: none;
+		margin: 0;
 	}
 `
 const Container = styled.div`
@@ -30,8 +29,7 @@ const Container = styled.div`
 	margin: ${sm} 0;
 	background-color: ${backgroundTertiary};
 	@media screen and (max-width: ${screenSmallPhone}) {
-		border-left: ${md} solid ${accent};
-		max-width: 90%;
+		border-width: ${xs};
 	}
 `
 

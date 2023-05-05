@@ -8,7 +8,8 @@ const Card = styled.div`
 	background-color: ${backgroundTertiary};
 	padding: ${xs};
 	@media screen and (max-width: ${screenSmallPhone}) {
-		border-bottom: ${xs} solid ${accent};
+		border-width: ${xs};
+		padding: 0;
 	}
 `
 
