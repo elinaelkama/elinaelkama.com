@@ -33,7 +33,6 @@ const Container = styled.div`
 `
 const Link = styled.a`
 	text-decoration: none;
-	font-family: ${typeface};
 	color: black;
 	font-size: ${sm};
 	transition: 0.1s linear color;

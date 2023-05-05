@@ -7,12 +7,12 @@ import Title from './components/Title'
 import Section from './components/Section'
 import Icons from './components/Icons'
 import Showcase from './components/Showcase'
+import './index.css'
 
 const AppContainer = styled.div`
   background-color: ${backgroundPrimary};
   padding: 0em;
   min-height: 100vh;
-  font-family: ${typeface};
 `
 const Container = styled.div`
   background-color: ${backgroundSecondary};
@@ -33,7 +33,7 @@ const Container = styled.div`
 const PersonalDetails = styled.div`
   display: grid;
   grid-template-columns: auto 20rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: ${sm};
   @media screen and (max-width: ${screenSmallPhone}){
     gap: none;
@@ -43,38 +43,47 @@ const PersonalDetails = styled.div`
 
 function App() {
   return (
-    <AppContainer className="App">
-      <Container>
-        <PersonalDetails>
-          <div>
-            <Title />
-            <Icons />
-          </div>
-          <div>
-            <Portrait altText='Portrait of Elina' />
-            <Links />
-          </div>
-        </PersonalDetails>
-        <Section title='Description'>
-          <p>I'm a student at Haaga-Helia University of Applied Sciences, studying Business Information Technology.</p>
-          <p>My most recent work is a Discord Bot, that is written with Python, is fully tested and is published.
-            It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
-          <p>I'm currently looking for work and or work placement.</p>
-        </Section>
-        <Section title='Portfolio'>
-          <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
-            <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
-            <p>The bots functions are tested using unittest. The coverage of tests with coverage is 100 %.</p>
-            <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
-            <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
-          </Showcase>
-          <Showcase title='Website' link='https://github.com/elinaelkama/elinaelkama.com'>
-            <p>This page is made with TypeScript and React, using styled-components.</p>
-            <p>It's published using GitHub pages.</p>
-          </Showcase>
-        </Section>
-      </Container>
-    </AppContainer>
+    <html>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"></link>
+        <meta name='theme-color' content={accent}></meta>
+      </head>
+      <body>
+        <AppContainer className="App">
+          <Container>
+            <PersonalDetails>
+              <div>
+                <Title />
+                <Icons />
+              </div>
+              <div>
+                <Portrait altText='Portrait of Elina' />
+                <Links />
+              </div>
+            </PersonalDetails>
+            <Section title='About Me'>
+              <p>I'm a student at Haaga-Helia University of Applied Sciences, studying Business Information Technology.</p>
+              <p>My most recent work is a Discord Bot, that is written with Python, is fully tested and is published.
+                It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
+              <p>I'm currently looking for work and or work placement.</p>
+            </Section>
+            <Section title='Portfolio'>
+              <Showcase title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
+                <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
+                <p>The bots functions are tested using unittest. The coverage of tests with coverage is 100 %.</p>
+                <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
+                <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
+              </Showcase>
+              <Showcase title='Website' link='https://github.com/elinaelkama/elinaelkama.com'>
+                <p>This page is made with TypeScript and React, using styled-components.</p>
+                <p>It's published using GitHub pages.</p>
+              </Showcase>
+            </Section>
+          </Container>
+        </AppContainer>
+      </body>
+    </html>
   )
 }
 
