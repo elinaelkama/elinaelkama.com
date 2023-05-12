@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
 import faciPicture from './assets/faci.jpg'
+import facadePicture from './assets/facade.jpg'
 import { accent, backgroundPrimary, backgroundSecondary, lg, screenSmallPhone, shadowLg, sm, typeface, xl, xs } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
@@ -66,15 +67,19 @@ function App() {
                 It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
               <p>I'm currently looking for work and or work placement.</p>
             </Section>
-            <Section title='Discord bot' link='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
+            <Section title='Discord bot' git='https://github.com/elinaelkama/faci' img={faciPicture} altText='Faci-bot user profile on Discord'>
               <p>The discord bot is made with Python and discord.py. The code follows Pythons module structure.</p>
               <p>The bots functions are tested using unittest. The coverage of tests is 100 %.</p>
               <p>The project is running on Google Cloud Run. It has a CD/CI pipeline from the GitHub repository.</p>
               <p>The bot is available to be added to your Discord server using the links in GitHub.</p>
             </Section>
-            <Section title='This website' link='https://github.com/elinaelkama/elinaelkama.com'>
+            <Section title='Restaurant page' git='https://github.com/elinaelkama/landingpage' demo="https://facade.elinaelkama.com/" img={facadePicture} altText='Restaurant Facade Homepage'>
+              <p>A website for a fictional restaurant made with HTML5 and CSS3.</p>
+              <p>It is published using GitHub pages.</p>
+            </Section>
+            <Section title='This website' git='https://github.com/elinaelkama/elinaelkama.com'>
               <p>This page is made with TypeScript and React, using styled-components.</p>
-              <p>It's published using GitHub pages.</p>
+              <p>It's published with GitHub pages.</p>
             </Section>
           </Container>
         </AppContainer>

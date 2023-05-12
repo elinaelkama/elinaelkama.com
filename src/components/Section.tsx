@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import { accent, backgroundTertiary, lg, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
+import { accent, backgroundTertiary, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
 import { ReactNode } from 'react'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaColumns } from 'react-icons/fa'
 
 type Props = {
 	children: ReactNode
 	title?: string
-	link?: string
+	git?: string
+	demo?: string
 	img?: string
 	altText?: string
 }
@@ -65,7 +66,7 @@ const Image = styled.img`
 	box-shadow: ${shadowSm};
 `
 
-const Section = ({ title, children, img, link, altText }: Props) => {
+const Section = ({ title, children, img, git, demo, altText }: Props) => {
 	if (img != undefined) {
 		return (
 			<Container>
@@ -74,7 +75,8 @@ const Section = ({ title, children, img, link, altText }: Props) => {
 					<Image alt={altText} src={img}></Image>
 					<Body>
 						{children}
-						{link && <Link href={link} target="_blank"><FaGithub />GitHub</Link>}
+						{git && <Link href={git} target="_blank"><FaGithub />GitHub</Link>}
+						{demo && <Link href={demo} target="_blank"><FaColumns />Webpage</Link>}
 					</Body>
 				</ImageCont>
 			</Container>
@@ -85,7 +87,8 @@ const Section = ({ title, children, img, link, altText }: Props) => {
 			<Header>{title}</Header>
 			<Body>
 				{children}
-				{link && <Link href={link} target="_blank"><FaGithub />GitHub</Link>}
+				{git && <Link href={git} target="_blank"><FaGithub />GitHub</Link>}
+				{demo && <Link href={demo} target="_blank"><FaColumns />Webpage</Link>}
 			</Body>
 		</Container>
 	)
