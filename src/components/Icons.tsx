@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FaJava, FaPhp, FaPython, FaReact } from "react-icons/fa";
-import { SiMysql, SiJavascript, SiCsharp } from "react-icons/si";
+import { SiMysql, SiJavascript, SiCsharp, SiTypescript } from "react-icons/si";
 import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmallPhone } from "../style/DesignSystem";
 
 type Props = {}
@@ -30,6 +30,7 @@ const Icons = (props: Props) => {
 	return (
 		<Container>
 			<Icon><SiJavascript /></Icon>
+			<Icon><SiTypescript /></Icon>
 			<Icon><FaPython /></Icon>
 			<Icon><FaPhp /></Icon>
 			<Icon><FaJava /></Icon>
