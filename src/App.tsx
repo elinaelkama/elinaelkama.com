@@ -3,7 +3,7 @@ import Portrait from './components/Portrait'
 import faciPicture from './assets/faci.jpg'
 import facadePicture from './assets/facade.jpg'
 import dbdPicture from './assets/dbdperk.jpg'
-import crappyBird from './assets/crappybird.png'
+import crappyBird from './assets/crappybird2.png'
 import { accent, backgroundPrimary, backgroundSecondary, lg, screenSmallPhone, shadowLg, sm, typeface, xl, xs } from './style/DesignSystem'
 import Links from './components/Links'
 import Title from './components/Title'
@@ -45,10 +45,11 @@ const PersonalDetails = styled.div`
 
 function App() {
   return (
-    <html>
+    <html lang="en">
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Questrial&display=swap" />
-        <meta name='theme-color' content={accent}></meta>
+        <meta name='theme-color' content={accent} />
+        <meta name='description' content="Portfolio of Software Developer Elina Elkama" />
       </head>
       <body>
         <AppContainer className="App">
@@ -69,7 +70,7 @@ function App() {
                 It has a CI/CD pipeline that publishes a new version of the bot up and running once I make a commit to GitHub.</p>
               <p>I'm currently looking for work and or work placement.</p>
             </Section>
-            <Section title='Façade' git='https://github.com/elinaelkama/landingpage' demo="https://facade.elinaelkama.com/" img={facadePicture} altText='Restaurant Facade Homepage'>
+            <Section title='Façade' git='https://github.com/elinaelkama/facade' demo="https://facade.elinaelkama.com/" img={facadePicture} altText='Restaurant Facade Homepage'>
               <p>A website for a fictional restaurant made with HTML5 and CSS3.</p>
               <p>It is published using GitHub pages.</p>
             </Section>
@@ -83,7 +84,8 @@ function App() {
               <p>A simple game written in Java because why not.</p>
             </Section>
             <Section title='DBD Perk Randomizer' git='https://github.com/elinaelkama/dbdrperkrandom' demo="https://dbd.lol/" img={dbdPicture} altText='Dead by Daylight Perk Randomizer'>
-              <p>Tool to get 1 to 4 random perks for the game Dead By Daylight.</p>
+              <p>Tool to get random perks and character for the game Dead By Daylight.</p>
+              <p>Character randomization can be turned on or off. Responsive for mobile usage.</p>
               <p>Made with TypeScript, React, Redux, Vite, GitHub pages.</p>
             </Section>
             <Section title='elinaelkama.com' git='https://github.com/elinaelkama/elinaelkama.com'>
