@@ -29,7 +29,6 @@ const Icon = styled.div`
 const Icons = (props: Props) => {
 	return (
 		<Container>
-			<Icon><FaAws /></Icon>
 			<Icon><SiJavascript /></Icon>
 			<Icon><SiTypescript /></Icon>
 			<Icon><FaReact /></Icon>
@@ -41,6 +40,7 @@ const Icons = (props: Props) => {
 			<Icon><SiRuby /></Icon>
 			<Icon><SiMysql /></Icon>
 			<Icon><SiPostgresql /></Icon>
+			<Icon><FaAws /></Icon>
 			<Icon><FaDocker /></Icon>
 			<Icon><FaUnity /></Icon>
 			<Icon><SiGithub /></Icon>

@@ -20,7 +20,7 @@ const Header = styled.h1`
 
 const Subtitle = styled.h2`
 	font-size: ${md};
-	margin: ${sm};
+	margin: ${xs};
 `
 
 const Title = (props: Props) => {
