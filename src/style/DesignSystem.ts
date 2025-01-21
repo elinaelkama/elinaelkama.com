@@ -1,7 +1,7 @@
 export const backgroundPrimary = "#424B54"
 export const backgroundSecondary = "#8B9EB7"
 export const backgroundTertiary = "#FFFFFF"
-export const accent = "#ACEB98"
+export const accent = "#418072"
 export const xs = "0.5rem"
 export const sm = "1rem"
 export const md = "1.5rem"

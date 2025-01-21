@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { FaJava, FaPhp, FaPython, FaReact } from "react-icons/fa";
-import { SiMysql, SiJavascript, SiCsharp, SiTypescript } from "react-icons/si";
-import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmallPhone } from "../style/DesignSystem";
+import { FaJava, FaPhp, FaPython, FaReact, FaAws, FaDocker, FaUnity } from "react-icons/fa";
+import { SiMysql, SiJavascript, SiCsharp, SiTypescript, SiGo, SiRuby, SiHtml5, SiCss3, SiPostgresql, SiGithub } from "react-icons/si";
+import { lg, md, sm, xxl, xs, accent, backgroundTertiary, screenSmallPhone, xl } from "../style/DesignSystem";
 
 type Props = {}
 
@@ -19,7 +19,7 @@ const Icon = styled.div`
 	margin: ${xs};
 	padding: ${xs};
 	border-radius: 50%;
-	font-size: ${xxl};
+	font-size: ${xl};
 	@media screen and (max-width: ${screenSmallPhone}){
 		font-size: ${lg};
 	}
@@ -29,14 +29,21 @@ const Icon = styled.div`
 const Icons = (props: Props) => {
 	return (
 		<Container>
+			<Icon><FaAws /></Icon>
 			<Icon><SiJavascript /></Icon>
 			<Icon><SiTypescript /></Icon>
-			<Icon><FaPython /></Icon>
-			<Icon><FaPhp /></Icon>
-			<Icon><FaJava /></Icon>
-			<Icon><SiMysql /></Icon>
-			<Icon><SiCsharp /></Icon>
 			<Icon><FaReact /></Icon>
+			<Icon><FaJava /></Icon>
+			<Icon><FaPython /></Icon>
+			<Icon><SiGo /></Icon>
+			<Icon><FaPhp /></Icon>
+			<Icon><SiCsharp /></Icon>
+			<Icon><SiRuby /></Icon>
+			<Icon><SiMysql /></Icon>
+			<Icon><SiPostgresql /></Icon>
+			<Icon><FaDocker /></Icon>
+			<Icon><FaUnity /></Icon>
+			<Icon><SiGithub /></Icon>
 		</Container>
 	)
 }
