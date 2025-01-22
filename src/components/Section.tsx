@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { accent, backgroundTertiary, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
+import { accent, backgroundTertiary, button, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
 import { ReactNode } from 'react'
 import { FaGithub, FaColumns } from 'react-icons/fa'
 
@@ -28,15 +28,24 @@ const Header = styled.h2`
 	margin: 0 0 ${sm} 0;
 `
 const Container = styled.div`
-	border-left: ${xxl} solid ${accent};
-	padding: ${md};
+	display: flex;
 	margin: ${sm} 0;
 	background-color: ${backgroundTertiary};
 	@media screen and (max-width: ${screenSmallPhone}) {
 		border-width: ${xs};
-		padding: ${sm};
 	}
 `
+const Sidebar = styled.div`
+	background: linear-gradient(to right, ${accent}, 43px, black);
+	min-width: ${xxl};
+	max-height: inherit;
+	border-radius: 0 0.2rem 0 0;
+	@media screen and (max-width: ${screenSmallPhone}) {
+		min-width: ${md};
+		background: linear-gradient(to right, ${accent}, 21px, black);
+	}
+`
+
 const Link = styled.a`
 	display: flex;
 	align-items: center;
@@ -60,36 +69,57 @@ const ImageCont = styled.div`
   	}
 `
 
+const TextCont = styled.div`
+	display: grid;
+	padding: ${md};
+	@media screen and (max-width: ${screenSmallPhone}) {
+		padding: ${sm};
+	}
+`
+
 const Image = styled.img`
 	justify-self: center;
 	width: min(100%, 20rem);
 	box-shadow: ${shadowSm};
+`
+const Button = styled.button`
+	background-color: ${button};
+	border-radius: 0.2rem;
+	box-shadow: 0.15rem 0.15rem 0px black;
+	box-sizing: border-box;
+	margin: 0 0.2rem;
 `
 
 const Section = ({ title, children, img, git, demo, altText }: Props) => {
 	if (img != undefined) {
 		return (
 			<Container>
-				<Header>{title}</Header>
-				<ImageCont>
-					<Image alt={altText} src={img}></Image>
-					<Body>
-						{children}
-						{git && <Link href={git} target="_blank"><FaGithub />GitHub</Link>}
-						{demo && <Link href={demo} target="_blank"><FaColumns />Webpage</Link>}
-					</Body>
-				</ImageCont>
+				<Sidebar></Sidebar>
+				<TextCont>
+					<Header>{title}</Header>
+					<ImageCont>
+						<Image alt={altText} src={img}></Image>
+						<Body>
+							{children}
+							{git && <Button><Link href={git} target="_blank"><FaGithub />GitHub</Link></Button>}
+							{demo && <Button><Link href={demo} target="_blank"><FaColumns />Webpage</Link></Button>}
+						</Body>
+					</ImageCont>
+				</TextCont>
 			</Container>
 		)
 	}
 	return (
 		<Container>
-			<Header>{title}</Header>
-			<Body>
-				{children}
-				{git && <Link href={git} target="_blank"><FaGithub />GitHub</Link>}
-				{demo && <Link href={demo} target="_blank"><FaColumns />Webpage</Link>}
-			</Body>
+			<Sidebar></Sidebar>
+			<TextCont>
+				<Header>{title}</Header>
+				<Body>
+					{children}
+					{git && <Button><Link href={git} target="_blank"><FaGithub />GitHub</Link></Button>}
+					{demo && <Button><Link href={demo} target="_blank"><FaColumns />Webpage</Link></Button>}
+				</Body>
+			</TextCont>
 		</Container>
 	)
 }

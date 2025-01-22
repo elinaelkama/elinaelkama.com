@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styled from "styled-components";
-import { accent, backgroundTertiary, lg, md, screenSmallPhone, sm, textShadow, typeface, xs } from "../style/DesignSystem";
+import { accent, backgroundTertiary, lg, md, screenSmallPhone, sm, xs } from "../style/DesignSystem";
 
 const Container = styled.div`
 	padding: ${sm};
@@ -17,7 +17,6 @@ const Link = styled.a`
 	display: flex;
 	align-items: center;
 	gap: ${xs};
-	text-decoration: none;
 	color: black;
 	font-size: ${md};
 	transition: 0.1s linear color;
