@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { accent, backgroundTertiary, button, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
 import { ReactNode } from 'react'
-import { FaGithub, FaColumns } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import styled from 'styled-components'
+import { accent, accentDark, backgroundTertiary, button, buttonHover, md, screenSmallPad, screenSmallPhone, shadowSm, sm, textSize, xs, xxl } from '../style/DesignSystem'
 
 type Props = {
 	children: ReactNode
@@ -36,13 +36,12 @@ const Container = styled.div`
 	}
 `
 const Sidebar = styled.div`
-	background: linear-gradient(to right, ${accent}, 43px, black);
+	background: linear-gradient(to left, ${accentDark}, ${accent} ${sm});
 	min-width: ${xxl};
 	max-height: inherit;
 	border-radius: 0 0.2rem 0 0;
 	@media screen and (max-width: ${screenSmallPhone}) {
 		min-width: ${md};
-		background: linear-gradient(to right, ${accent}, 21px, black);
 	}
 `
 
@@ -54,10 +53,6 @@ const Link = styled.a`
 	color: black;
 	font-size: ${sm};
 	transition: 0.1s linear color;
-	&:hover{
-		text-decoration: none;
-		color: ${accent};
-	}
 `
 const ImageCont = styled.div`
 	display: grid;
@@ -85,9 +80,13 @@ const Image = styled.img`
 const Button = styled.button`
 	background-color: ${button};
 	border-radius: 0.2rem;
-	box-shadow: 0.15rem 0.15rem 0px black;
 	box-sizing: border-box;
+	border: solid 0.1rem ${accentDark};
 	margin: 0 0.2rem;
+	padding: ${xs};
+	&:hover{
+		background-color: ${buttonHover};
+	}
 `
 
 const Section = ({ title, children, img, git, demo, altText }: Props) => {
@@ -102,7 +101,7 @@ const Section = ({ title, children, img, git, demo, altText }: Props) => {
 						<Body>
 							{children}
 							{git && <Button><Link href={git} target="_blank"><FaGithub />GitHub</Link></Button>}
-							{demo && <Button><Link href={demo} target="_blank"><FaColumns />Webpage</Link></Button>}
+							{demo && <Button><Link href={demo} target="_blank"><FaExternalLinkAlt />Webpage</Link></Button>}
 						</Body>
 					</ImageCont>
 				</TextCont>
@@ -117,7 +116,7 @@ const Section = ({ title, children, img, git, demo, altText }: Props) => {
 				<Body>
 					{children}
 					{git && <Button><Link href={git} target="_blank"><FaGithub />GitHub</Link></Button>}
-					{demo && <Button><Link href={demo} target="_blank"><FaColumns />Webpage</Link></Button>}
+					{demo && <Button><Link href={demo} target="_blank"><FaExternalLinkAlt />Webpage</Link></Button>}
 				</Body>
 			</TextCont>
 		</Container>
